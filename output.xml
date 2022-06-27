@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.6 on win32)" generated="20220627 06:26:23.590" rpa="false" schemaversion="3">
+<suite id="s1" name="1Dz" source="C:\Users\User\PycharmProjects\1dz">
+<suite id="s1-s1" name="1 1Task" source="C:\Users\User\PycharmProjects\1dz\1_1task.robot">
+<test id="s1-s1-t1" name="Search max and min element" line="5">
+<kw name="Evaluate" library="BuiltIn">
+<var>${max_number}</var>
+<arg>max(${LIST})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220627 06:26:23.621" level="INFO">${max_number} = 10</msg>
+<status status="PASS" starttime="20220627 06:26:23.621" endtime="20220627 06:26:23.621"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${min_number}</var>
+<arg>min(${LIST})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220627 06:26:23.621" level="INFO">${min_number} = -1</msg>
+<status status="PASS" starttime="20220627 06:26:23.621" endtime="20220627 06:26:23.621"/>
+</kw>
+<kw name="Print Log With Arguments">
+<arg>Наибольшее число:</arg>
+<arg>${max_number}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>${message1}${message2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220627 06:26:23.621" level="INFO">Наибольшее число:10</msg>
+<status status="PASS" starttime="20220627 06:26:23.621" endtime="20220627 06:26:23.621"/>
+</kw>
+<status status="PASS" starttime="20220627 06:26:23.621" endtime="20220627 06:26:23.621"/>
+</kw>
+<kw name="Print Log With Arguments">
+<arg>Наименьшее число:</arg>
+<arg>${min_number}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>${message1}${message2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220627 06:26:23.621" level="INFO">Наименьшее число:-1</msg>
+<status status="PASS" starttime="20220627 06:26:23.621" endtime="20220627 06:26:23.621"/>
+</kw>
+<status status="PASS" starttime="20220627 06:26:23.621" endtime="20220627 06:26:23.621"/>
+</kw>
+<status status="PASS" starttime="20220627 06:26:23.621" endtime="20220627 06:26:23.621"/>
+</test>
+<test id="s1-s1-t2" name="Search uniq elements" line="11">
+<kw name="Evaluate" library="BuiltIn">
+<var>${uniq_element}</var>
+<arg>set(${LIST})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220627 06:26:23.621" level="INFO">${uniq_element} = {0, 1, 2, 3, 5, 10, -1}</msg>
+<status status="PASS" starttime="20220627 06:26:23.621" endtime="20220627 06:26:23.621"/>
+</kw>
+<kw name="Print Log With Arguments">
+<arg>Уникальные числа:</arg>
+<arg>${uniq_element}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>${message1}${message2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220627 06:26:23.621" level="INFO">Уникальные числа:{0, 1, 2, 3, 5, 10, -1}</msg>
+<status status="PASS" starttime="20220627 06:26:23.621" endtime="20220627 06:26:23.621"/>
+</kw>
+<status status="PASS" starttime="20220627 06:26:23.621" endtime="20220627 06:26:23.621"/>
+</kw>
+<status status="PASS" starttime="20220627 06:26:23.621" endtime="20220627 06:26:23.621"/>
+</test>
+<test id="s1-s1-t3" name="Sum of elements" line="15">
+<kw name="Evaluate" library="BuiltIn">
+<var>${sum}</var>
+<arg>sum(${LIST})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220627 06:26:23.621" level="INFO">${sum} = 21</msg>
+<status status="PASS" starttime="20220627 06:26:23.621" endtime="20220627 06:26:23.621"/>
+</kw>
+<kw name="Print Log With Arguments">
+<arg>Сумма элементов:</arg>
+<arg>${sum}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>${message1}${message2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220627 06:26:23.621" level="INFO">Сумма элементов:21</msg>
+<status status="PASS" starttime="20220627 06:26:23.621" endtime="20220627 06:26:23.621"/>
+</kw>
+<status status="PASS" starttime="20220627 06:26:23.621" endtime="20220627 06:26:23.621"/>
+</kw>
+<status status="PASS" starttime="20220627 06:26:23.621" endtime="20220627 06:26:23.621"/>
+</test>
+<status status="PASS" starttime="20220627 06:26:23.606" endtime="20220627 06:26:23.637"/>
+</suite>
+<suite id="s1-s2" name="1 2Task" source="C:\Users\User\PycharmProjects\1dz\1_2task.robot">
+<test id="s1-s2-t1" name="Check formula" line="5">
+<for flavor="IN">
+<var>${item}</var>
+<value>@{TEST_LIST}</value>
+<iter>
+<var name="${item}">0</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${farengate}</var>
+<arg>9/5*${item}+32</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220627 06:26:23.637" level="INFO">${farengate} = 32.0</msg>
+<status status="PASS" starttime="20220627 06:26:23.637" endtime="20220627 06:26:23.637"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${farengate}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220627 06:26:23.637" level="INFO">32.0</msg>
+<status status="PASS" starttime="20220627 06:26:23.637" endtime="20220627 06:26:23.637"/>
+</kw>
+<status status="PASS" starttime="20220627 06:26:23.637" endtime="20220627 06:26:23.637"/>
+</iter>
+<iter>
+<var name="${item}">350</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${farengate}</var>
+<arg>9/5*${item}+32</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220627 06:26:23.637" level="INFO">${farengate} = 662.0</msg>
+<status status="PASS" starttime="20220627 06:26:23.637" endtime="20220627 06:26:23.637"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${farengate}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220627 06:26:23.637" level="INFO">662.0</msg>
+<status status="PASS" starttime="20220627 06:26:23.637" endtime="20220627 06:26:23.637"/>
+</kw>
+<status status="PASS" starttime="20220627 06:26:23.637" endtime="20220627 06:26:23.637"/>
+</iter>
+<iter>
+<var name="${item}">-32</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${farengate}</var>
+<arg>9/5*${item}+32</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220627 06:26:23.637" level="INFO">${farengate} = -25.6</msg>
+<status status="PASS" starttime="20220627 06:26:23.637" endtime="20220627 06:26:23.637"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${farengate}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220627 06:26:23.637" level="INFO">-25.6</msg>
+<status status="PASS" starttime="20220627 06:26:23.637" endtime="20220627 06:26:23.637"/>
+</kw>
+<status status="PASS" starttime="20220627 06:26:23.637" endtime="20220627 06:26:23.637"/>
+</iter>
+<iter>
+<var name="${item}">100</var>
+<kw name="Evaluate" library="BuiltIn">
+<var>${farengate}</var>
+<arg>9/5*${item}+32</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220627 06:26:23.637" level="INFO">${farengate} = 212.0</msg>
+<status status="PASS" starttime="20220627 06:26:23.637" endtime="20220627 06:26:23.637"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${farengate}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220627 06:26:23.637" level="INFO">212.0</msg>
+<status status="PASS" starttime="20220627 06:26:23.637" endtime="20220627 06:26:23.637"/>
+</kw>
+<status status="PASS" starttime="20220627 06:26:23.637" endtime="20220627 06:26:23.637"/>
+</iter>
+<status status="PASS" starttime="20220627 06:26:23.637" endtime="20220627 06:26:23.637"/>
+</for>
+<status status="PASS" starttime="20220627 06:26:23.637" endtime="20220627 06:26:23.637"/>
+</test>
+<status status="PASS" starttime="20220627 06:26:23.637" endtime="20220627 06:26:23.637"/>
+</suite>
+<status status="PASS" starttime="20220627 06:26:23.590" endtime="20220627 06:26:23.637"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="1Dz">1Dz</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="1 1Task">1Dz.1 1Task</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="1 2Task">1Dz.1 2Task</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
